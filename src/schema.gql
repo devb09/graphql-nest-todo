@@ -2,6 +2,18 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Todo {
+  identifier: Int!
+  description: String!
+  done: Boolean!
+}
+
 type Query {
-  helloWord: String!
+  """returns hw"""
+  hello: String!
+  randomNumber: Float!
+
+  """From Zero to argument TO (default 10)"""
+  randomFromZeroTo(to: Int): Int!
+  todos: [Todo!]!
 }
